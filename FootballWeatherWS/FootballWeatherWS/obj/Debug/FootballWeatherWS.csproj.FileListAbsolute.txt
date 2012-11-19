@@ -1,0 +1,5 @@
+C:\Documents and Settings\Simon\My Documents\GitHub\CloudProject\FootballWeatherWS\FootballWeatherWS\bin\FootballWeatherWS.dll
+C:\Documents and Settings\Simon\My Documents\GitHub\CloudProject\FootballWeatherWS\FootballWeatherWS\bin\FootballWeatherWS.pdb
+C:\Documents and Settings\Simon\My Documents\GitHub\CloudProject\FootballWeatherWS\FootballWeatherWS\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Simon\My Documents\GitHub\CloudProject\FootballWeatherWS\FootballWeatherWS\obj\Debug\FootballWeatherWS.dll
+C:\Documents and Settings\Simon\My Documents\GitHub\CloudProject\FootballWeatherWS\FootballWeatherWS\obj\Debug\FootballWeatherWS.pdb

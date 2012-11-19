@@ -1,0 +1,3 @@
+http://wsf.cdyne.com/WeatherWS/weather.asmx
+
+youtube: weather web service in ASP.net 4.0
