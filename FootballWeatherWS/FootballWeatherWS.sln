@@ -3,6 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballWeatherWS", "FootballWeatherWS\FootballWeatherWS.csproj", "{CBC735E5-1992-4113-A06A-8E910F9D2DDC}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Weather", "..\..\..\Visual Studio 2010\WebSites\Weather\", "{6F61CF7A-F20F-4ADD-BF79-2702BBEC5614}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/Weather"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Visual Studio 2010\WebSites\Weather\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Weather\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Weather"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\Visual Studio 2010\WebSites\Weather\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Weather\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1256"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +34,10 @@ Global
 		{CBC735E5-1992-4113-A06A-8E910F9D2DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBC735E5-1992-4113-A06A-8E910F9D2DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBC735E5-1992-4113-A06A-8E910F9D2DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F61CF7A-F20F-4ADD-BF79-2702BBEC5614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F61CF7A-F20F-4ADD-BF79-2702BBEC5614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F61CF7A-F20F-4ADD-BF79-2702BBEC5614}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F61CF7A-F20F-4ADD-BF79-2702BBEC5614}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
