@@ -1,56 +1,52 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FootballWeatherWS._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<%@ Register Assembly="GMaps" Namespace="Subgurim.Controles" TagPrefix="cc1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
-    function initialize() {
-        var latlng = new google.maps.LatLng(-34.397, 150.644);
-        var options =
-    {
-    var marker = new google.maps.Marker
-(
-    {
-        position: new google.maps.LatLng(-34.397, 150.644),
-        map: map,
-        title: 'Click me'
-    }
-);
-        zoom: 3,
-        center: new google.maps.LatLng(37.09, -95.71),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        mapTypeControl: true,
-        mapTypeControlOptions:
-        {
-            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-            poistion: google.maps.ControlPosition.TOP_RIGHT,
-            mapTypeIds: [google.maps.MapTypeId.ROADMAP,
-              google.maps.MapTypeId.TERRAIN,
-              google.maps.MapTypeId.HYBRID,
-              google.maps.MapTypeId.SATELLITE]
-        },
-        navigationControl: true,
-        navigationControlOptions:
-        {
-            style: google.maps.NavigationControlStyle.ZOOM_PAN
-        },
-        scaleControl: true,
-        disableDoubleClickZoom: true,
-        draggable: false,
-        streetViewControl: true,
-        draggableCursor: 'move'
-    };
-        var map = new google.maps.Map(document.getElementById("map"), options);
-    }
-    window.onload = initialize;
-</script>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
-    <title></title>
+    <title>American Football Weather</title>
 </head>
 <body>
     <form id="form1" runat="server">
+<h1>
+    <asp:Image ID="NFL" ImageUrl="images/NFL.jpg" runat="server" Height="83px" 
+        Width="921px" />
+    </h1>
+    <asp:ScriptManager 
+    ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+ 
     <div>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
+        <cc1:GMap ID="GMap1" runat="server" Width="400px" Height="300px"
+        enableHookMouseWheelToZoom="True"  />
+        
+    </ContentTemplate>
+    </asp:UpdatePanel>
     
     </div>
+    <asp:TextBox ID="TextBox1" runat="server">Enter Zip Code</asp:TextBox>
+    <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+        Text="Enter Zip &amp; Click" />
+    <br />
+    <asp:Label ID="Label1" runat="server"></asp:Label>
+    <br />
+    <asp:Label ID="Label2" runat="server"></asp:Label>
+    <br />
+    <asp:Label ID="Label3" runat="server"></asp:Label>
+    <br />
+    <asp:Label ID="Label4" runat="server"></asp:Label>
+    <br />
+    <asp:Label ID="Label5" runat="server"></asp:Label>
+    <br />
+    
+    <asp:Image ID="Image1" runat="server" Height="115px" Width="102px" 
+        BorderStyle="None" />
+    <br />
     </form>
 </body>
 </html>
