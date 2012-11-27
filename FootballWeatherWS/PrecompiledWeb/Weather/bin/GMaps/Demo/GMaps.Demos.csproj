@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29F813E3-8FF7-46A1-ACE7-74FBFEF831A5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMaps.Demos</RootNamespace>
+    <AssemblyName>GMaps.Demos</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50927\lib\35\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AntiXSSLibrary">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50927\lib\35\SanitizerProviders\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50927\lib\35\SanitizerProviders\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50927\lib\35\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\CustomOverlay.aspx" />
+    <Content Include="Controls\Extras.aspx" />
+    <Content Include="Controls\GLayers.aspx" />
+    <Content Include="Controls\MapOptions.aspx" />
+    <Content Include="Controls\GroundOverlay.aspx" />
+    <Content Include="Controls\HierarchicalMap.aspx" />
+    <Content Include="Controls\Lines.aspx" />
+    <Content Include="Controls\Polygons.aspx" />
+    <Content Include="Controls\PreBuilt.aspx" />
+    <Content Include="Controls\ScreenOverlay.aspx" />
+    <Content Include="Controls\StreeViewOverlay.aspx" />
+    <Content Include="Controls\Tiles.aspx" />
+    <Content Include="Geo\Advanced.aspx" />
+    <Content Include="Geo\Bar.aspx" />
+    <Content Include="Geo\Basic.aspx" />
+    <Content Include="Geo\Directions.aspx" />
+    <Content Include="Geo\Directions2.aspx" />
+    <Content Include="Geo\GeoIP.aspx" />
+    <Content Include="Geo\GeoXml.aspx" />
+    <Content Include="Geo\Inverse.aspx" />
+    <Content Include="Geo\Traffic.aspx" />
+    <Content Include="Icons\Advanced.aspx" />
+    <Content Include="Icons\Basic.aspx" />
+    <Content Include="Icons\GoogleChart.aspx" />
+    <Content Include="Icons\Markers.aspx" />
+    <Content Include="InfoWindows\InfoWindowBasic.aspx" />
+    <Content Include="InfoWindows\InfoWindowIcon.aspx" />
+    <Content Include="InfoWindows\InfoWindowOptions.aspx" />
+    <Content Include="InfoWindows\InfoWindowTabbed.aspx" />
+    <Content Include="InfoWindows\MapBlowUp.aspx" />
+    <Content Include="Initiation\Basics.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Initiation\Basics2.aspx" />
+    <Content Include="Initiation\Basics3.aspx" />
+    <Content Include="Initiation\Centering.aspx" />
+    <Content Include="Initiation\CustomCursors.aspx" />
+    <Content Include="Initiation\KeyboardHandler.aspx" />
+    <Content Include="Initiation\MapType.aspx" />
+    <Content Include="Initiation\Minimization.aspx" />
+    <Content Include="Initiation\Zoom.aspx" />
+    <Content Include="Initiation\Zoom2.aspx" />
+    <Content Include="JsEvents\Client.aspx" />
+    <Content Include="JsEvents\Custom.aspx" />
+    <Content Include="JsEvents\CustomInside.aspx" />
+    <Content Include="JsEvents\GetById.aspx" />
+    <Content Include="JsEvents\GMapToString.aspx" />
+    <Content Include="JsEvents\Postback.aspx" />
+    <Content Include="JsEvents\Server.aspx" />
+    <Content Include="JsEvents\Server2.aspx" />
+    <Content Include="JsEvents\Store.aspx" />
+    <Content Include="Maps\Custom.aspx" />
+    <Content Include="Maps\Earth.aspx" />
+    <Content Include="Maps\Mars.aspx" />
+    <Content Include="Maps\Moon.aspx" />
+    <Content Include="Maps\Sky.aspx" />
+    <Content Include="Maps\Static.aspx" />
+    <Content Include="Maps\StreetView.aspx" />
+    <Content Include="Others\AdsManager.aspx" />
+    <Content Include="Others\Animation.aspx" />
+    <Content Include="Others\Bounds.aspx" />
+    <Content Include="Others\DataSources.aspx" />
+    <Content Include="Others\GenericAdd.aspx" />
+    <Content Include="Others\PostBack.aspx" />
+    <Content Include="Others\UpdatePanels.aspx" />
+    <Content Include="Utility\Carousel.aspx" />
+    <Content Include="Utility\Clustered.aspx" />
+    <Content Include="Utility\ClusteredPlus.aspx" />
+    <Content Include="Utility\StyledMarkers.aspx" />
+    <Content Include="Utility\DraggableObject.aspx" />
+    <Content Include="Utility\DragZoom.aspx" />
+    <Content Include="Utility\IconMaker.aspx" />
+    <Content Include="Utility\InfoBoxes.aspx" />
+    <Content Include="Utility\KeyDrag.aspx" />
+    <Content Include="Utility\MapType.aspx" />
+    <Content Include="Utility\Marker.aspx" />
+    <Content Include="Utility\Menu.aspx" />
+    <Content Include="Utility\Popup.aspx" />
+    <Content Include="Utility\Snap.aspx" />
+    <Content Include="Utility\Snapshot.aspx" />
+    <Content Include="Utility\StreetView.aspx" />
+    <Content Include="Utility\Tabbed.aspx" />
+    <Content Include="Utility\Tracker.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\CustomOverlay.aspx.cs">
+      <DependentUpon>CustomOverlay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomOverlay.aspx.designer.cs">
+      <DependentUpon>CustomOverlay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Extras.aspx.cs">
+      <DependentUpon>Extras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Extras.aspx.designer.cs">
+      <DependentUpon>Extras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GLayers.aspx.cs">
+      <DependentUpon>GLayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\GLayers.aspx.designer.cs">
+      <DependentUpon>GLayers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MapOptions.aspx.cs">
+      <DependentUpon>MapOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MapOptions.aspx.designer.cs">
+      <DependentUpon>MapOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GroundOverlay.aspx.cs">
+      <DependentUpon>GroundOverlay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\GroundOverlay.aspx.designer.cs">
+      <DependentUpon>GroundOverlay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HierarchicalMap.aspx.cs">
+      <DependentUpon>HierarchicalMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HierarchicalMap.aspx.designer.cs">
+      <DependentUpon>HierarchicalMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Lines.aspx.cs">
+      <DependentUpon>Lines.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Lines.aspx.designer.cs">
+      <DependentUpon>Lines.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Polygons.aspx.cs">
+      <DependentUpon>Polygons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Polygons.aspx.designer.cs">
+      <DependentUpon>Polygons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PreBuilt.aspx.cs">
+      <DependentUpon>PreBuilt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PreBuilt.aspx.designer.cs">
+      <DependentUpon>PreBuilt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScreenOverlay.aspx.cs">
+      <DependentUpon>ScreenOverlay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ScreenOverlay.aspx.designer.cs">
+      <DependentUpon>ScreenOverlay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StreeViewOverlay.aspx.cs">
+      <DependentUpon>StreeViewOverlay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StreeViewOverlay.aspx.designer.cs">
+      <DependentUpon>StreeViewOverlay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tiles.aspx.cs">
+      <DependentUpon>Tiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Tiles.aspx.designer.cs">
+      <DependentUpon>Tiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos.Master.cs">
+      <DependentUpon>Demos.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos.Master.designer.cs">
+      <DependentUpon>Demos.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Geo\Advanced.aspx.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo\Advanced.aspx.designer.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geo\Bar.aspx.cs">
+      <DependentUpon>Bar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo\Bar.aspx.designer.cs">
+      <DependentUpon>Bar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geo\Basic.aspx.cs">
+      <DependentUpon>Basic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo\Basic.aspx.designer.cs">
+      <DependentUpon>Basic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geo\Directions.aspx.cs">
+      <DependentUpon>Directions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo\Directions.aspx.designer.cs">
+      <DependentUpon>Directions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geo\Directions2.aspx.cs">
+      <DependentUpon>Directions2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo\Directions2.aspx.designer.cs">
+      <DependentUpon>Directions2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geo\GeoIP.aspx.cs">
+      <DependentUpon>GeoIP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo\GeoIP.aspx.designer.cs">
+      <DependentUpon>GeoIP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geo\GeoXml.aspx.cs">
+      <DependentUpon>GeoXml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo\GeoXml.aspx.designer.cs">
+      <DependentUpon>GeoXml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geo\Inverse.aspx.cs">
+      <DependentUpon>Inverse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo\Inverse.aspx.designer.cs">
+      <DependentUpon>Inverse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Geo\Traffic.aspx.cs">
+      <DependentUpon>Traffic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Geo\Traffic.aspx.designer.cs">
+      <DependentUpon>Traffic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Advanced.aspx.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Icons\Advanced.aspx.designer.cs">
+      <DependentUpon>Advanced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Basic.aspx.cs">
+      <DependentUpon>Basic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Icons\Basic.aspx.designer.cs">
+      <DependentUpon>Basic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\GoogleChart.aspx.cs">
+      <DependentUpon>GoogleChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Icons\GoogleChart.aspx.designer.cs">
+      <DependentUpon>GoogleChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Icons\Markers.aspx.cs">
+      <DependentUpon>Markers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Icons\Markers.aspx.designer.cs">
+      <DependentUpon>Markers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWindows\InfoWindowBasic.aspx.cs">
+      <DependentUpon>InfoWindowBasic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoWindows\InfoWindowBasic.aspx.designer.cs">
+      <DependentUpon>InfoWindowBasic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWindows\InfoWindowIcon.aspx.cs">
+      <DependentUpon>InfoWindowIcon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoWindows\InfoWindowIcon.aspx.designer.cs">
+      <DependentUpon>InfoWindowIcon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWindows\InfoWindowOptions.aspx.cs">
+      <DependentUpon>InfoWindowOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoWindows\InfoWindowOptions.aspx.designer.cs">
+      <DependentUpon>InfoWindowOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWindows\InfoWindowTabbed.aspx.cs">
+      <DependentUpon>InfoWindowTabbed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoWindows\InfoWindowTabbed.aspx.designer.cs">
+      <DependentUpon>InfoWindowTabbed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoWindows\MapBlowUp.aspx.cs">
+      <DependentUpon>MapBlowUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoWindows\MapBlowUp.aspx.designer.cs">
+      <DependentUpon>MapBlowUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\Basics.aspx.cs">
+      <DependentUpon>Basics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\Basics.aspx.designer.cs">
+      <DependentUpon>Basics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\Basics2.aspx.cs">
+      <DependentUpon>Basics2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\Basics2.aspx.designer.cs">
+      <DependentUpon>Basics2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\Basics3.aspx.cs">
+      <DependentUpon>Basics3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\Basics3.aspx.designer.cs">
+      <DependentUpon>Basics3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\Centering.aspx.cs">
+      <DependentUpon>Centering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\Centering.aspx.designer.cs">
+      <DependentUpon>Centering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\CustomCursors.aspx.cs">
+      <DependentUpon>CustomCursors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\CustomCursors.aspx.designer.cs">
+      <DependentUpon>CustomCursors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\KeyboardHandler.aspx.cs">
+      <DependentUpon>KeyboardHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\KeyboardHandler.aspx.designer.cs">
+      <DependentUpon>KeyboardHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\MapType.aspx.cs">
+      <DependentUpon>MapType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\MapType.aspx.designer.cs">
+      <DependentUpon>MapType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\Minimization.aspx.cs">
+      <DependentUpon>Minimization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\Minimization.aspx.designer.cs">
+      <DependentUpon>Minimization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\Zoom.aspx.cs">
+      <DependentUpon>Zoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\Zoom.aspx.designer.cs">
+      <DependentUpon>Zoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Initiation\Zoom2.aspx.cs">
+      <DependentUpon>Zoom2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Initiation\Zoom2.aspx.designer.cs">
+      <DependentUpon>Zoom2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEvents\Client.aspx.cs">
+      <DependentUpon>Client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEvents\Client.aspx.designer.cs">
+      <DependentUpon>Client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEvents\Custom.aspx.cs">
+      <DependentUpon>Custom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEvents\Custom.aspx.designer.cs">
+      <DependentUpon>Custom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEvents\CustomInside.aspx.cs">
+      <DependentUpon>CustomInside.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEvents\CustomInside.aspx.designer.cs">
+      <DependentUpon>CustomInside.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEvents\GetById.aspx.cs">
+      <DependentUpon>GetById.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEvents\GetById.aspx.designer.cs">
+      <DependentUpon>GetById.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEvents\GMapToString.aspx.cs">
+      <DependentUpon>GMapToString.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEvents\GMapToString.aspx.designer.cs">
+      <DependentUpon>GMapToString.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEvents\Postback.aspx.cs">
+      <DependentUpon>Postback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEvents\Postback.aspx.designer.cs">
+      <DependentUpon>Postback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEvents\Server.aspx.cs">
+      <DependentUpon>Server.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEvents\Server.aspx.designer.cs">
+      <DependentUpon>Server.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEvents\Server2.aspx.cs">
+      <DependentUpon>Server2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEvents\Server2.aspx.designer.cs">
+      <DependentUpon>Server2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JsEvents\Store.aspx.cs">
+      <DependentUpon>Store.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JsEvents\Store.aspx.designer.cs">
+      <DependentUpon>Store.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\Custom.aspx.cs">
+      <DependentUpon>Custom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maps\Custom.aspx.designer.cs">
+      <DependentUpon>Custom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\Earth.aspx.cs">
+      <DependentUpon>Earth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maps\Earth.aspx.designer.cs">
+      <DependentUpon>Earth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\Mars.aspx.cs">
+      <DependentUpon>Mars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maps\Mars.aspx.designer.cs">
+      <DependentUpon>Mars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\Moon.aspx.cs">
+      <DependentUpon>Moon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maps\Moon.aspx.designer.cs">
+      <DependentUpon>Moon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\Sky.aspx.cs">
+      <DependentUpon>Sky.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maps\Sky.aspx.designer.cs">
+      <DependentUpon>Sky.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\Static.aspx.cs">
+      <DependentUpon>Static.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maps\Static.aspx.designer.cs">
+      <DependentUpon>Static.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maps\StreetView.aspx.cs">
+      <DependentUpon>StreetView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maps\StreetView.aspx.designer.cs">
+      <DependentUpon>StreetView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Others\AdsManager.aspx.cs">
+      <DependentUpon>AdsManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Others\AdsManager.aspx.designer.cs">
+      <DependentUpon>AdsManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Others\Animation.aspx.cs">
+      <DependentUpon>Animation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Others\Animation.aspx.designer.cs">
+      <DependentUpon>Animation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Others\Bounds.aspx.cs">
+      <DependentUpon>Bounds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Others\Bounds.aspx.designer.cs">
+      <DependentUpon>Bounds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Others\DataSources.aspx.cs">
+      <DependentUpon>DataSources.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Others\DataSources.aspx.designer.cs">
+      <DependentUpon>DataSources.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Others\GenericAdd.aspx.cs">
+      <DependentUpon>GenericAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Others\GenericAdd.aspx.designer.cs">
+      <DependentUpon>GenericAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Others\PostBack.aspx.cs">
+      <DependentUpon>PostBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Others\PostBack.aspx.designer.cs">
+      <DependentUpon>PostBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Others\UpdatePanels.aspx.cs">
+      <DependentUpon>UpdatePanels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Others\UpdatePanels.aspx.designer.cs">
+      <DependentUpon>UpdatePanels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Carousel.aspx.cs">
+      <DependentUpon>Carousel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\Carousel.aspx.designer.cs">
+      <DependentUpon>Carousel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Clustered.aspx.cs">
+      <DependentUpon>Clustered.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\Clustered.aspx.designer.cs">
+      <DependentUpon>Clustered.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\ClusteredPlus.aspx.cs">
+      <DependentUpon>ClusteredPlus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\ClusteredPlus.aspx.designer.cs">
+      <DependentUpon>ClusteredPlus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\StyledMarkers.aspx.cs">
+      <DependentUpon>StyledMarkers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\StyledMarkers.aspx.designer.cs">
+      <DependentUpon>StyledMarkers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\DraggableObject.aspx.cs">
+      <DependentUpon>DraggableObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\DraggableObject.aspx.designer.cs">
+      <DependentUpon>DraggableObject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\DragZoom.aspx.cs">
+      <DependentUpon>DragZoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\DragZoom.aspx.designer.cs">
+      <DependentUpon>DragZoom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\IconMaker.aspx.cs">
+      <DependentUpon>IconMaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\IconMaker.aspx.designer.cs">
+      <DependentUpon>IconMaker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\InfoBoxes.aspx.cs">
+      <DependentUpon>InfoBoxes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\InfoBoxes.aspx.designer.cs">
+      <DependentUpon>InfoBoxes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\KeyDrag.aspx.cs">
+      <DependentUpon>KeyDrag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\KeyDrag.aspx.designer.cs">
+      <DependentUpon>KeyDrag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\MapType.aspx.cs">
+      <DependentUpon>MapType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\MapType.aspx.designer.cs">
+      <DependentUpon>MapType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Marker.aspx.cs">
+      <DependentUpon>Marker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\Marker.aspx.designer.cs">
+      <DependentUpon>Marker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Popup.aspx.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\Popup.aspx.designer.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Snap.aspx.cs">
+      <DependentUpon>Snap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\Snap.aspx.designer.cs">
+      <DependentUpon>Snap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Snapshot.aspx.cs">
+      <DependentUpon>Snapshot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\Snapshot.aspx.designer.cs">
+      <DependentUpon>Snapshot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\StreetView.aspx.cs">
+      <DependentUpon>StreetView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\StreetView.aspx.designer.cs">
+      <DependentUpon>StreetView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Tabbed.aspx.cs">
+      <DependentUpon>Tabbed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\Tabbed.aspx.designer.cs">
+      <DependentUpon>Tabbed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\Tracker.aspx.cs">
+      <DependentUpon>Tracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utility\Tracker.aspx.designer.cs">
+      <DependentUpon>Tracker.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GMaps\GMaps.csproj">
+      <Project>{688B53ED-70CC-4243-9F62-315CA8202312}</Project>
+      <Name>GMaps</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Demos.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4625</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49357/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

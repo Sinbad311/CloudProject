@@ -1,0 +1,201 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Demos.master.cs" Inherits="Demos.Demos" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head runat="server">
+    <title>Subgurim Maps Demos</title>
+    <style type="text/css"> 
+        body { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; }
+        a, a:visited { color: #316499;}
+        v\:* { behavior: url(#default#VML); } 
+        
+        .menu { float: left; width: 300px; }
+        .main { margin-left: 320px; }
+
+        .demo {
+            margin: 6px;
+            padding: 6px;
+            border: 1px solid #444444;
+            background-color: #dddddd;
+        }
+
+        .code {
+            font-family: "Andale Mono", "Courier New", monospace;
+            white-space: pre;
+            margin: 6px;
+            padding: 6px;
+            overflow: auto;
+        }
+
+        .aspx {
+            border: 1px solid #fffa54;
+            background-color: #fffdbf;
+        }
+
+        .cs {
+            border: 1px solid #5466ff;
+            background-color: #bfc6ff;
+        }
+
+        li.deleted {
+            text-decoration: line-through;
+        }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a').each(function () {
+                if (location.href.indexOf($(this).attr('href')) > -1) {
+                    $(this).wrap('<b />');
+                }
+            });
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <h1>Subgurim Maps Demo</h1>
+    <form id="form1" runat="server">
+    <div class="menu">
+        <ol>
+            <li>Initiation
+                <ol>
+                    <li><a runat="server" href="~/Initiation/Basics.aspx">Basics 1</a></li>
+                    <li><a runat="server" href="~/Initiation/Basics2.aspx">Basics 2</a></li>
+                    <li><a runat="server" href="~/Initiation/Basics3.aspx">Basics 3</a></li>
+                    <li><a runat="server" href="~/Initiation/Zoom.aspx">Zoom 1</a></li>
+                    <li><a runat="server" href="~/Initiation/Zoom2.aspx">Zoom 2</a></li>
+                    <li><a runat="server" href="~/Initiation/MapType.aspx">Map type</a></li>
+                    <li><a runat="server" href="~/Initiation/KeyboardHandler.aspx">GKeyboardHandler</a></li>
+                    <li><a runat="server" href="~/Initiation/Centering.aspx">Centering the map</a></li>
+                    <li><a runat="server" href="~/Initiation/CustomCursors.aspx">Custom mouse cursors</a></li>
+                    <li><a runat="server" href="~/Initiation/Minimization.aspx">Minimize code</a></li>
+                </ol>
+            </li>
+            <li>Controls and overlays
+                <ol>
+		            <li><a runat="server" href="~/Controls/MapOptions.aspx">GMapUI</a></li>
+                    <%--Obsolete: <li><a runat="server" href="~/Controls/PreBuilt.aspx">PreBuilt Controls</a></li>--%>
+		            <li><a runat="server" href="~/Controls/Extras.aspx">Extra Controls</a></li>
+		            <li><a runat="server" href="~/Controls/Lines.aspx">Lines</a></li>
+		            <li><a runat="server" href="~/Controls/Polygons.aspx">Polygons</a></li>
+		            <%--Not in Beta: 
+                    <li><a runat="server" href="~/Controls/Tiles.aspx">Tile Layers</a></li>
+                    --%>
+		            <li><a runat="server" href="~/Controls/GroundOverlay.aspx">GroundOverlay</a></li>
+                    <%--
+		            <li><a runat="server" href="~/Controls/ScreenOverlay.aspx">ScreenOverlay</a></li>
+		            <li><a runat="server" href="~/Controls/CustomOverlay.aspx">Custom Overlays</a></li>
+		            <li><a runat="server" href="~/Controls/StreeViewOverlay.aspx">StreetViewOverlay</a></li>
+		            <li class="deleted"><a runat="server" href="~/Controls/HierarchicalMap.aspx">HyerarchicalMapType Control</a></li>
+		            --%>
+                    <li><a runat="server" href="~/Controls/GLayers.aspx">Layers and libraries</a></li>
+                    
+                </ol>
+            </li>
+            <li>InfoWindows
+                <ol>
+		            <li><a runat="server" href="~/InfoWindows/InfoWindowBasic.aspx">InfoWindow</a></li>
+		            <li><a runat="server" href="~/InfoWindows/InfoWindowIcon.aspx">InfoWindow with icon</a></li>
+		            <%--Obsolete: <li><a runat="server" href="~/InfoWindows/InfoWindowTabbed.aspx">Tabbed InfoWindow</a></li>--%>
+		            <%--Obsolete: <li><a runat="server" href="~/InfoWindows/MapBlowUp.aspx">ShowMapBlowUp</a></li>--%>
+		            <li><a runat="server" href="~/InfoWindows/InfoWindowOptions.aspx">GInfoWindowOptions</a></li>
+                </ol>
+            </li>
+            <li>Icons
+                <ol>
+		            <li><a runat="server" href="~/Icons/Basic.aspx">Basic icons</a></li>
+		            <li><a runat="server" href="~/Icons/Advanced.aspx">Advanced icons</a></li>
+		            <li><a runat="server" href="~/Icons/Markers.aspx">Marker Manager</a></li>
+		            <li><a runat="server" href="~/Icons/GoogleChart.aspx">Google Chart Icon Maker</a></li>
+                </ol>
+            </li>
+            <li>Other maps
+                <ol>
+		            <li><a runat="server" href="~/Maps/Static.aspx">Static Map</a></li>
+<%--		            <li><a runat="server" href="~/Maps/Earth.aspx">GoogleEarth Map</a></li>
+		            <li><a runat="server" href="~/Maps/Mars.aspx">Mars Map</a></li>
+		            <li><a runat="server" href="~/Maps/Moon.aspx">Moon Map</a></li>
+		            <li><a runat="server" href="~/Maps/Sky.aspx">Sky Map</a></li>
+		            <li><a runat="server" href="~/Maps/Custom.aspx">Custom Maps</a></li>--%>
+		            <li><a runat="server" href="~/Maps/StreetView.aspx">StreetViewPanorama</a></li>
+                </ol>
+            </li>
+            <li>Events and Javascript
+                <ol>
+		            <li><a runat="server" href="~/JsEvents/Client.aspx">Client events</a></li>
+		            <li><a runat="server" href="~/JsEvents/Server.aspx">Server events</a></li>
+		            <li><a runat="server" href="~/JsEvents/Server2.aspx">Server events 2</a></li>
+		            <li><a runat="server" href="~/JsEvents/Postback.aspx">Asp.net Postback</a></li>
+		            <li><a runat="server" href="~/JsEvents/Custom.aspx">CustomJavascript</a></li>
+		            <li><a runat="server" href="~/JsEvents/CustomInside.aspx">CustomInsideJavascript</a></li>
+		            <li><a runat="server" href="~/JsEvents/GMapToString.aspx">GMap.ToString</a></li>
+		            <li><a runat="server" href="~/JsEvents/GetById.aspx">getGMapElementById</a></li>
+		            <li><a runat="server" href="~/JsEvents/Store.aspx">Store</a></li>
+                </ol>
+            </li>
+            <li>Geo
+                <ol>
+		            <li><a runat="server" href="~/Geo/Basic.aspx">Basic GeoCoding</a></li>
+		            <%--<li><a runat="server" href="~/Geo/Bar.aspx">Google Bar</a></li>--%>
+		            <li><a runat="server" href="~/Geo/Advanced.aspx">Advanced GeoCoding</a></li>
+		            <li><a runat="server" href="~/Geo/Inverse.aspx">Inverse Geocoding</a></li>
+		            <%--<li><a runat="server" href="~/Geo/GeoXml.aspx">GGeoXml</a></li>--%>
+		            <%--<li><a runat="server" href="~/Geo/Traffic.aspx">Traffic</a></li>--%>
+		            <%--<li><a runat="server" href="~/Geo/Directions.aspx">GDirection</a></li>--%>
+		            <%--<li><a runat="server" href="~/Geo/Directions2.aspx">GDirections Advanced</a></li>--%>
+		            <%--<li><a runat="server" href="~/Geo/GeoIP.aspx">GeoIP</a></li>--%>
+                </ol>
+            </li>
+            <li>GMaps Utility Library
+                <ol>
+		            <%--<li><a runat="server" href="~/Utility/DragZoom.aspx">DragZoomControl</a></li>--%>
+		            <%--<li><a runat="server" href="~/Utility/Marker.aspx">LabeledMarker</a></li>--%>
+		            <%--<li><a runat="server" href="~/Utility/MapType.aspx">ExtMapTypeControl</a></li>--%>
+		            <li><a runat="server" href="~/Utility/IconMaker.aspx">MapIconMaker</a></li>
+		            <%--<li><a runat="server" href="~/Utility/Tracker.aspx">MarkerTracker</a></li>--%>
+		            <%--<li><a runat="server" href="~/Utility/Carousel.aspx">CarouselMapType</a></li>--%>
+		            <%--<li><a runat="server" href="~/Utility/Menu.aspx">ContextMenu Control</a></li>--%>
+		            <%--<li><a runat="server" href="~/Utility/StreetView.aspx">ExtStreeview Control</a></li>--%>
+		            <%--<li><a runat="server" href="~/Utility/KeyDrag.aspx">KeyDrag Zoom</a></li>--%>
+		            <li><a runat="server" href="~/Utility/Clustered.aspx">Marker Clusterer</a></li>
+                    <li><a runat="server" href="~/Utility/ClusteredPlus.aspx">Marker Clusterer Plus</a></li>
+		            <%--<li><a runat="server" href="~/Utility/Popup.aspx">Popup Maker</a></li>--%>
+		            <%--<li><a runat="server" href="~/Utility/Snapshot.aspx">Snap Shot Control</a></li>--%>
+		            <%--<li><a runat="server" href="~/Utility/Snap.aspx">Snap to route</a></li>--%>
+		            <%--<li><a runat="server" href="~/Utility/Tabbed.aspx">Tabbed Max Content</a></li>--%>
+                    <li><a runat="server" href="~/Utility/InfoBoxes.aspx">Info Box</a></li>
+                    <li><a runat="server" href="~/Utility/StyledMarkers.aspx">Styled Markers</a></li>
+                </ol>
+            </li>
+            <li>Others
+                <ol>
+		            <li><a runat="server" href="~/Others/GenericAdd.aspx">Generic Add</a></li>
+		            <li><a runat="server" href="~/Others/Animation.aspx">Movement and animation</a></li>
+		            <li><a runat="server" href="~/Others/Bounds.aspx">GLatLngBounds</a></li>
+		            <li><a runat="server" href="~/Others/DataSources.aspx">Datasource</a></li>
+		            <li><a runat="server" href="~/Others/PostBack.aspx">PostBack support</a></li>
+                    <li><a runat="server" href="~/Others/UpdatePanels.aspx">UpdatePanel support</a></li>
+		            <%--<li><a runat="server" href="~/Others/AdsManager.aspx">GAdsManager</a></li>--%>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    <div class="main">
+        <h2><%= Page.Title %></h2>
+        <div class="demo">
+            <asp:ContentPlaceHolder ID="main" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <h3><%= AspxFile %></h3>
+        <div class="code aspx"><%= AspxCode %></div>
+        
+        <h3><%= CsFile %></h3>
+        <div class="code cs"><%= CsCode %></div>
+    </div>
+    </form>
+</body>
+</html>
